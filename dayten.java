@@ -136,7 +136,7 @@ class dayten
 			for(int i=0;i<count;i++)
 				System.out.print("zero" +" ");
 		}
-	}*/
+	}
 	//INPUT 12345 OUTPUT 5*1=5+ 4*2=8 +3=16 ONLY ODD NUMBERS 
 	public static void main(String args[])
 	{
@@ -169,5 +169,5 @@ class dayten
 		}
 		sum+=middle;
 		System.out.println(sum);
-	}			
+	}*/		
 }
