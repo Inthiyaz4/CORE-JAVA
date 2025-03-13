@@ -169,5 +169,93 @@ class dayten
 		}
 		sum+=middle;
 		System.out.println(sum);
-	}*/		
+	}
+	//FIND THE MIN AND MAX OF A NUMBER AND PRODUCT THEM
+	public static void main(String args[])
+	{
+		int num=12345,max=Integer.MIN_VALUE,min=Integer.MAX_VALUE;
+		while(num!=0)
+		{
+			int rem=num%10;
+			if(rem>max)
+				max=rem;
+			else if(rem<min)
+				min=rem;
+			num/=10;
+		}
+		int pro=min*max;
+		System.out.println("product of " +min +" and " +max +" is " +pro);
+	}
+	//CONTINUE STATEMENT	
+	public static void main(String args[])
+	{
+		int sn=1,end=10;
+		while(sn<=end)
+		{
+			if(sn==7)
+			{
+				sn++;
+				continue;
+			}
+			System.out.println(sn);
+			sn++;
+		}
+	}
+	//SECOND LARGEST NUMBER IN A NUMBER
+	public static void main(String args[])
+	{
+		int num=57452148,max=Integer.MIN_VALUE,min=Integer.MIN_VALUE;
+		while(num!=0)
+		{
+			int rem=num%10;
+			if(rem>max)
+			{
+				min=max;
+				max=rem;
+			}
+			else if(rem>min && rem<max)
+				min=rem;
+			num/=10;
+		}
+		System.out.println(min);
+	}
+	//DO WHILE USING FOR EXTRACTION
+	public static void main(String args[])
+	{
+		int num=1234,rev=0;
+		do
+		{
+			int rem=num%10;
+			rev=rev*10+rem;
+			num/=10;
+			
+		}while(num!=0);
+		System.out.println(rev);
+	}*/
+	//I/O = 111 O/P 333 I/O = 123 O/P =632 SUM OF ALL DIGITS AND DIVIDE BY EACH NUMBER AND PRINT 
+	public static void main(String args[])
+	{
+		int num=54321,sum=0,rev=0,temp=num;
+		while(num!=0)
+		{
+			int rem=num%10;
+			rev=rev*10+rem;
+			sum+=rem;
+			num/=10;
+		}
+		num=rev;
+		rev=0; 
+		while(num!=0)
+		{
+			int rem=num%10;
+			int a=sum/rem;
+			if(a>=1 && a<=9)
+				rev=rev*10+a;
+			else if(a>=10 && a<=99)
+				rev=rev*100+a;
+			num/=10;
+		}
+		System.out.println(rev);
+	}
+		
 }
