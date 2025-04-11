@@ -175,5 +175,29 @@ class daythirteen
 			num/=10;
 		}
 		System.out.println(n1);
+	}
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter  number ");
+		int n=sc.nextInt();
+		int num=n,n1=0,n2=0;
+		while(num!=0)
+		{
+			int rem=num%10;
+			double sqr=Math.sqrt(rem);
+			if(sqr*sqr==rem)
+			{
+				if(rem>n1)
+				{
+					n2=n1;
+					n1=rem;
+				}
+				else if(rem>n2 && n2<n1)
+					n2=rem;
+			}
+			num/=10;
+		}
+		System.out.println("Second Largest Sqaure number is : " +n2);
 	}*/
 }
